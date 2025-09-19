@@ -5,7 +5,7 @@
 
 - 💬 Ask me about **Deep learning, Large language model and Multimodal large language model**
 
-- 📫 How to reach me **ji yiiiyyy@gmail.com**
+- 📫 How to reach me **jiyiiiyyy@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">

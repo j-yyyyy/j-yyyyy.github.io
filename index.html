@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yiyan Ji - Homepage</title>
+    <meta
+      name="description"
+      content="Yiyan Ji is an incoming Ph.D. student at Nanjing University and a research intern on Kuaishou's Kling team, working on artificial intelligence and multimodal large language models."
+    >
+    <meta property="og:title" content="Yiyan Ji - Homepage">
+    <meta
+      property="og:description"
+      content="Research homepage for Yiyan Ji, focused on artificial intelligence and multimodal large language models."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://j-yyyyy.github.io/">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23224b8d'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Arial,sans-serif' font-size='24' font-weight='700' fill='white'%3EYJ%3C/text%3E%3C/svg%3E">
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #494e52;
+        --muted: #6f777d;
+        --line: #f2f3f3;
+        --line-strong: #d7dbde;
+        --link: #224b8d;
+        --link-hover: #142d55;
+        --heading: #222222;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: var(--bg);
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.55;
+      }
+
+      a {
+        color: var(--link);
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: var(--link-hover);
+        text-decoration: underline;
+      }
+
+      p,
+      ul,
+      dl {
+        margin-top: 0;
+      }
+
+      ul {
+        padding-left: 1.45em;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: var(--heading);
+        line-height: 1.2;
+      }
+
+      h1 {
+        margin: 0 0 0.65em;
+        font-size: 1.55rem;
+      }
+
+      h2 {
+        margin: 1.65em 0 0.7em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid var(--line);
+        font-size: 1.25rem;
+      }
+
+      h3 {
+        margin: 0 0 0.3em;
+        font-size: 1rem;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.96);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        max-width: 1180px;
+        min-height: 50px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        gap: 1.4rem;
+      }
+
+      .nav-home {
+        color: var(--heading);
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.1rem 0.8rem;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 0.75rem 0;
+        color: var(--muted);
+      }
+
+      .nav-links a:hover {
+        color: var(--heading);
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 260px minmax(0, 1fr);
+        gap: 3rem;
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 2.35rem 1rem 3rem;
+      }
+
+      .profile {
+        align-self: start;
+      }
+
+      @media (min-width: 900px) {
+        .profile {
+          position: sticky;
+          top: 5.25rem;
+        }
+      }
+
+      .avatar {
+        display: grid;
+        place-items: center;
+        width: 168px;
+        height: 168px;
+        margin-bottom: 1.15rem;
+        border-radius: 50%;
+        background: var(--link);
+        color: #ffffff;
+        font-size: 2.25rem;
+        font-weight: 700;
+      }
+
+      .profile-name {
+        margin-bottom: 0.35em;
+        font-size: 1.35rem;
+      }
+
+      .profile-bio {
+        margin-bottom: 1.1rem;
+        color: var(--muted);
+      }
+
+      .profile-links {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .profile-links li {
+        margin-bottom: 0.55rem;
+      }
+
+      .profile-label {
+        color: var(--muted);
+      }
+
+      .content {
+        max-width: 820px;
+      }
+
+      .content section:first-child h1 {
+        margin-top: 0.05em;
+      }
+
+      .section-anchor {
+        scroll-margin-top: 5rem;
+      }
+
+      .compact-list {
+        margin-bottom: 0;
+      }
+
+      .compact-list li {
+        margin-bottom: 0.35rem;
+      }
+
+      .pub-list {
+        margin-top: 0.9rem;
+      }
+
+      .pub-item {
+        padding: 0.85rem 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .pub-title {
+        margin-bottom: 0.25rem;
+        font-weight: 700;
+      }
+
+      .pub-authors,
+      .pub-venue,
+      .pub-note {
+        margin-bottom: 0.18rem;
+      }
+
+      .pub-authors {
+        color: #303436;
+      }
+
+      .pub-venue,
+      .pub-note,
+      .legend {
+        color: var(--muted);
+      }
+
+      .venue-tag {
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      .timeline-item {
+        padding-bottom: 0.8rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .timeline-item p {
+        margin-bottom: 0.15rem;
+      }
+
+      .footer {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 1rem;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 860px) {
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 0;
+          padding-top: 0.7rem;
+          padding-bottom: 0.5rem;
+        }
+
+        .nav-links a {
+          padding: 0.2rem 0;
+        }
+
+        .layout {
+          grid-template-columns: 1fr;
+          gap: 1.8rem;
+          padding-top: 1.4rem;
+        }
+
+        .profile {
+          position: static;
+          display: grid;
+          grid-template-columns: auto minmax(0, 1fr);
+          gap: 1rem;
+          align-items: center;
+          padding-bottom: 1.2rem;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .avatar {
+          width: 96px;
+          height: 96px;
+          margin-bottom: 0;
+          font-size: 1.45rem;
+        }
+
+        .profile-links {
+          grid-column: 1 / -1;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.25rem 1rem;
+        }
+
+        .profile-links li {
+          margin-bottom: 0;
+        }
+      }
+
+      @media (max-width: 520px) {
+        body {
+          font-size: 14px;
+        }
+
+        .profile {
+          grid-template-columns: 1fr;
+        }
+
+        .avatar {
+          width: 88px;
+          height: 88px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="nav-home" href="#about-me">Homepage</a>
+        <div class="nav-links">
+          <a href="#about-me">About Me</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#work-experience">Work Experience</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="layout">
+      <aside class="profile" aria-label="Profile summary">
+        <div class="avatar" aria-hidden="true">YJ</div>
+        <div>
+          <h1 class="profile-name">Yiyan Ji</h1>
+          <p class="profile-bio">Multimodal Understanding, Multimodal Agents, Embodied Agents</p>
+        </div>
+        <ul class="profile-links">
+          <li><span class="profile-label">Affiliation:</span> Nanjing University</li>
+          <li><span class="profile-label">Internship:</span> Kling Team, Kuaishou</li>
+          <li><a href="mailto:jiyiiiyyy@gmail.com">Email</a> jiyiiiyyy@gmail.com</li>
+          <li><a href="https://scholar.google.com/citations?user=WITfhHwAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a></li>
+        </ul>
+      </aside>
+
+      <main class="content">
+        <section class="section-anchor" id="about-me">
+          <h1>About Me</h1>
+          <p>
+            I am an incoming Ph.D. student at the School of Intelligence Science
+            and Technology, Nanjing University. I am also a research intern on
+            Kuaishou's Kling team.
+          </p>
+          <p>
+            My research focuses on multimodal large language model reasoning,
+            planning, evaluation, and efficient multimodal systems. I am very interested in research on multimodal agents, particularly topics related to embodied agents that align with embodied intelligence.
+          </p>
+        </section>
+
+        <section class="section-anchor" id="research">
+          <h2>Research</h2>
+          <ul class="compact-list">
+            <li>Audio-visual and omni-modal understanding for multimodal large language models.</li>
+            <li>Efficient omni-modal modeling, token compression, and evaluation.</li>
+            <li>Multimodal reasoning and planning for Agent-based solutions to complex Real-world Problems.</li>
+          </ul>
+        </section>
+
+        <section class="section-anchor" id="publications">
+          <h2>Publications</h2>
+          <div class="pub-list">
+            <article class="pub-item">
+              <p class="pub-title">
+                <a href="https://arxiv.org/abs/2602.04804" target="_blank" rel="noreferrer">
+                  OmniSIFT: Modality-Asymmetric Token Compression for Efficient Omni-modal Large Language Models
+                </a>
+                <span class="venue-tag">[ICML 2026]</span>
+              </p>
+              <p class="pub-authors">Yue Ding*, <strong>Yiyan Ji*</strong>, Jungang Li, Xuyang Liu, Xinlong Chen, Junfei Wu, Bozhou Li, Bohan Zeng, Yang Shi, Yushuo Guan, et al.</p>
+              <p class="pub-venue">arXiv preprint arXiv:2602.04804, 2026</p>
+            </article>
+
+            <article class="pub-item">
+              <p class="pub-title">
+                <a href="https://arxiv.org/abs/2510.10689" target="_blank" rel="noreferrer">
+                  OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs
+                </a>
+                <span class="venue-tag">[ICLR 2026]</span>
+              </p>
+              <p class="pub-authors">Caorui Li*, Yu Chen*, <strong>Yiyan Ji*</strong>, Jin Xu, Ziyu Cui, Shiyu Li, Yifei Zhang, Wenrui Wang, Ziyue Song, Dong Zhang, et al.</p>
+              <p class="pub-venue">arXiv preprint arXiv:2510.10689, 2025</p>
+            </article>
+
+            <article class="pub-item">
+              <p class="pub-title">
+                <a href="https://arxiv.org/abs/2507.23382" target="_blank" rel="noreferrer">
+                  MPCC: A Novel Benchmark for Multimodal Planning with Complex Constraints in Multimodal Large Language Models
+                </a>
+                <span class="venue-tag">[ACM MM 2025]</span>
+              </p>
+              <p class="pub-authors"><strong>Yiyan Ji</strong>, Haoran Chen, Qiguang Chen, Chengyue Wu, Libo Qin, Wanxiang Che</p>
+              <p class="pub-venue">arXiv preprint arXiv:2507.23382, 2025</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-anchor" id="work-experience">
+          <h2>Work Experience</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <h3>Research Intern, Kling Team, Kuaishou Technology</h3>
+              <p>Working on multimodal and omni-modal model research.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-anchor" id="education">
+          <h2>Education</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <h3>Ph.D., School of Intelligence Science and Technology, Nanjing University</h3>
+              <p>Incoming doctoral student.</p>
+            </div>
+            <div class="timeline-item">
+              <h3>Undergraduate Study, School of Future Technology, Harbin Institute of Technology</h3>
+              <p>Focused on deep learning, large language models, and multimodal large language models.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-anchor" id="contact">
+          <h2>Contact</h2>
+          <p>
+            I am open to discussions and collaboration on multimodal understanding, efficient reasoning, agents, and related applications. I am currently exploring the application of agents in embodied scenarios. Anyone interested in my research is welcome to contact me via <a href="mailto:jiyiiiyyy@gmail.com">email</a>.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer">
+      Yiyan Ji
+    </footer>
+  </body>
+</html>
